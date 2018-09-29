@@ -13,16 +13,15 @@ function driversWithRevenueOver(drivers, arg){
 
 function driverNamesWithRevenueOver(drivers, arg){
   let newarr=[];
+  newarr=drivers.filter(function(revenue)
+  {
   
-  for (let x of drivers){
-  if(x.revenue > arg)
+    return revenue > arg ;
   
-  newarr.push(x.name);
-}
- 
+  })
+  
   return newarr;
 }
-
 
 function exactMatch(drivers,arg){
   let newarr=[];
